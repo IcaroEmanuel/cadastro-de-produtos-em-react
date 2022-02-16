@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Menu from './components/Menu';
+import Cadastro from './pages/Cadastro';
+import Listagem from './pages/Listagem';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu />
+      <Routes>
+        <Route exact path="/" element={ <Cadastro/> } />
+        <Route exact path="/listagem" element={ <Listagem/> } />
+      </Routes>
     </div>
   );
 }
+
+// Usei react router para trabalhar com rotas: https://reactrouter.com/
 
 export default App;
