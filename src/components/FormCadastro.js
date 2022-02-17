@@ -1,26 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react';
+import ProdutosContext from '../context/ProdutosContext';
 
 export default function FormCadastro() {
-  const [produto, setProduto] = useState('');
-  const [descricao, setDescricao] = useState('');
-  const [valor, setValor] = useState(0);
-  const [disponibilidade, setDisponibilidade] = useState('Sim');
-
-  const capturarProduto = (event) => {
-   setProduto(event.target.value);
-  };
-
-  const capturarDescricao = (event) => {
-    setDescricao(event.target.value);
-  };
-
-  const capturarValor = (event) => {
-    setValor(event.target.value);
-  };
-
-  const capturarDisponibilidade = (event) => {
-    setDisponibilidade(event.target.value);
-  };
+  const {
+    produto,
+    descricao,
+    valor,
+    disponibilidade,
+    capturarProduto,
+    capturarDescricao,
+    capturarValor,
+    capturarDisponibilidade,
+  } = useContext(ProdutosContext);
 
   const salvarProduto = () => {
     const novoProduto = [];

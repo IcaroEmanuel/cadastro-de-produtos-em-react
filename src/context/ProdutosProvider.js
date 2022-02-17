@@ -7,15 +7,31 @@ export default function ProdutosProvider({ children }) {
   const [valor, setValor] = useState(0);
   const [disponibilidade, setDisponibilidade] = useState('Sim');
 
+  const capturarProduto = (event) => {
+    setProduto(event.target.value);
+   };
+ 
+   const capturarDescricao = (event) => {
+     setDescricao(event.target.value);
+   };
+ 
+   const capturarValor = (event) => {
+     setValor(event.target.value);
+   };
+ 
+   const capturarDisponibilidade = (event) => {
+     setDisponibilidade(event.target.value);
+   };
+
   const contextValue = {
     produto,
-    setProduto,
+    capturarProduto,
     descricao,
-    setDescricao,
+    capturarDescricao,
     valor,
-    setValor,
+    capturarValor,
     disponibilidade,
-    setDisponibilidade,
+    capturarDisponibilidade,
   };
   
   return (
