@@ -23,6 +23,11 @@ export default function ProdutosProvider({ children }) {
      setDisponibilidade(event.target.value);
    };
 
+   const capturarDadosLs = () => {
+     const produtos = JSON.parse(localStorage.getItem('Produtos'))
+     return produtos;
+   };
+
   const contextValue = {
     produto,
     capturarProduto,
@@ -32,6 +37,7 @@ export default function ProdutosProvider({ children }) {
     capturarValor,
     disponibilidade,
     capturarDisponibilidade,
+    capturarDadosLs,
   };
   
   return (
