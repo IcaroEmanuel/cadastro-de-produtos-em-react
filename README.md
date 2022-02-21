@@ -1,6 +1,6 @@
 # Cadastro e listagem de produtos
 
-Este projeto foi proposto pela OAK Tecnologia como parte do processo seletivo 
+Cadastro e listagem de produtos em React
 
 ## Techs utilizadas
 
